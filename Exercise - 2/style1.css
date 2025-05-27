@@ -1,0 +1,40 @@
+/* Hide radio buttons */
+.filters input[type="radio"] {
+  display: none;
+}
+
+/* Style labels as buttons */
+.filters label {
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+/* Add active style */
+.filters input[type="radio"]:checked + label {
+  background: #2c3e50;
+}
+
+/* Default: hide all items */
+.item {
+  display: none;
+}
+
+/* Show all items when #show-all is checked */
+#show-all:checked ~ .items .item {
+  display: block;
+}
+
+/* Show only fruit items */
+#show-fruit:checked ~ .items .fruit {
+  display: block;
+}
+
+/* Show only vegetable items */
+#show-vegetable:checked ~ .items .vegetable {
+  display: block;
+}
